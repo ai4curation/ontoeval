@@ -1,0 +1,177 @@
+{
+  "number": 30426,
+  "title": "Fixing RHEA xref. Fixes #30179",
+  "body": "",
+  "url": "https://github.com/geneontology/go-ontology/pull/30426",
+  "state": "MERGED",
+  "author": "sjm41",
+  "created_at": "2025-06-06T09:18:05+00:00",
+  "updated_at": "2025-06-06T09:27:12+00:00",
+  "labels": [],
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws6vwK7-",
+      "author": "github-actions",
+      "body": "<!-- GITHUB_ACTION_COMMENT_PR -->\nHere's a diff of how these changes impact the classified ontology: \n\n# Ontology comparison\n\n## Left\n- Ontology IRI: `http://purl.obolibrary.org/obo/go.owl`\n- Version IRI: `http://purl.obolibrary.org/obo/go/releases/2025-06-06/go.owl`\n- Loaded from: `file:/__w/go-ontology/go-ontology/src/ontology/../../reasoned-master.owl/reasoned.owl`\n\n## Right\n- Ontology IRI: `http://purl.obolibrary.org/obo/go.owl`\n- Version IRI: `http://purl.obolibrary.org/obo/go/releases/2025-06-06/go.owl`\n- Loaded from: `file:/__w/go-ontology/go-ontology/src/ontology/../../reasoned-pr.owl/reasoned.owl`\n\n### Ontology imports \n\n\n\n### Ontology annotations \n\n\n\n### 2-chlorobenzoate 1,2-dioxygenase activity `http://purl.obolibrary.org/obo/GO_0018626`\n#### Removed\n- [2-chlorobenzoate 1,2-dioxygenase activity](http://purl.obolibrary.org/obo/GO_0018626) [has_exact_synonym](http://www.geneontology.org/formats/oboInOwl#hasExactSynonym) \"2-halobenzoate 1,2-dioxygenase activity\" \n\n- [2-chlorobenzoate 1,2-dioxygenase activity](http://purl.obolibrary.org/obo/GO_0018626) [database_cross_reference](http://www.geneontology.org/formats/oboInOwl#hasDbXref) \"MetaCyc:2-CHLOROBENZOATE-12-DIOXYGENASE-RXN\" \n\n- [2-chlorobenzoate 1,2-dioxygenase activity](http://purl.obolibrary.org/obo/GO_0018626) [database_cross_reference](http://www.geneontology.org/formats/oboInOwl#hasDbXref) \"RHEA:21652\" \n\n- [2-chlorobenzoate 1,2-dioxygenase activity](http://purl.obolibrary.org/obo/GO_0018626) [label](http://www.w3.org/2000/01/rdf-schema#label) \"2-chlorobenzoate 1,2-dioxygenase activity\" \n\n- [2-chlorobenzoate 1,2-dioxygenase activity](http://purl.obolibrary.org/obo/GO_0018626) [database_cross_reference](http://www.geneontology.org/formats/oboInOwl#hasDbXref) \"UM-BBD_reactionID:r0632\" \n\n- [2-chlorobenzoate 1,2-dioxygenase activity](http://purl.obolibrary.org/obo/GO_0018626) [definition](http://purl.obolibrary.org/obo/IAO_0000115) \"Catalysis of the reaction: 2-chlorobenzoate + NADH + H+ + O2 = catechol + chloride + NAD+ + CO2.\" \n  - [database_cross_reference](http://www.geneontology.org/formats/oboInOwl#hasDbXref) \"EC:1.14.12.13\" \n\n#### Added\n- [2-chlorobenzoate 1,2-dioxygenase activity](http://purl.obolibrary.org/obo/GO_0018626) [database_cross_reference](http://www.geneontology.org/formats/oboInOwl#hasDbXref) \"MetaCyc:RXN-13706\" \n\n- [2-chlorobenzoate 1,2-dioxygenase activity](http://purl.obolibrary.org/obo/GO_0018626) [definition](http://purl.obolibrary.org/obo/IAO_0000115) \"Catalysis of the reaction: a 2-halobenzoate + NADH + O2 + H+ = a halide anion + catechol + CO2 + NAD+.\" \n  - [database_cross_reference](http://www.geneontology.org/formats/oboInOwl#hasDbXref) \"RHEA:53736\" \n\n- [2-chlorobenzoate 1,2-dioxygenase activity](http://purl.obolibrary.org/obo/GO_0018626) [label](http://www.w3.org/2000/01/rdf-schema#label) \"2-halobenzoate 1,2-dioxygenase activity\" \n\n- [2-chlorobenzoate 1,2-dioxygenase activity](http://purl.obolibrary.org/obo/GO_0018626) [database_cross_reference](http://www.geneontology.org/formats/oboInOwl#hasDbXref) \"RHEA:53736\" \n\n- [2-chlorobenzoate 1,2-dioxygenase activity](http://purl.obolibrary.org/obo/GO_0018626) [has_narrow_synonym](http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym) \"2-chlorobenzoate 1,2-dioxygenase activity\" \n\n- [2-chlorobenzoate 1,2-dioxygenase activity](http://purl.obolibrary.org/obo/GO_0018626) [term tracker item](http://purl.obolibrary.org/obo/IAO_0000233) \"https://github.com/geneontology/go-ontology/issues/30179\"^^[anyURI](http://www.w3.org/2001/XMLSchema#anyURI) \n",
+      "created_at": "2025-06-06T09:25:18+00:00",
+      "url": "https://github.com/geneontology/go-ontology/pull/30426#issuecomment-2948640510"
+    }
+  ],
+  "assignees": null,
+  "repo": "geneontology/go-ontology",
+  "pr_number": 30426,
+  "head_commit": "397e27489eca36f8ec106a8bd029ef479c83ab2b",
+  "base_commit": "5eb6bac18918e796283c786342b90662357041ac",
+  "files_changed": [
+    "src/ontology/go-edit.obo"
+  ],
+  "commits": [
+    "Fixing RHEA xref. Fixes #30179"
+  ],
+  "diff": "diff --git a/src/ontology/go-edit.obo b/src/ontology/go-edit.obo\nindex 35e999454..ede916f78 100644\n--- a/src/ontology/go-edit.obo\n+++ b/src/ontology/go-edit.obo\n@@ -135286,16 +135286,16 @@ is_a: GO:0016708 ! oxidoreductase activity, acting on paired donors, with incorp\n \n [Term]\n id: GO:0018626\n-name: 2-chlorobenzoate 1,2-dioxygenase activity\n+name: 2-halobenzoate 1,2-dioxygenase activity\n namespace: molecular_function\n-def: \"Catalysis of the reaction: 2-chlorobenzoate + NADH + H+ + O2 = catechol + chloride + NAD+ + CO2.\" [EC:1.14.12.13]\n+def: \"Catalysis of the reaction: a 2-halobenzoate + NADH + O2 + H+ = a halide anion + catechol + CO2 + NAD+.\" [RHEA:53736]\n+synonym: \"2-chlorobenzoate 1,2-dioxygenase activity\" NARROW []\n synonym: \"2-chlorobenzoate,NADH:oxygen oxidoreductase (1,2-hydroxylating, dechlorinating, decarboxylating)\" RELATED [EC:1.14.12.13]\n-synonym: \"2-halobenzoate 1,2-dioxygenase activity\" EXACT []\n xref: EC:1.14.12.13\n-xref: MetaCyc:2-CHLOROBENZOATE-12-DIOXYGENASE-RXN\n-xref: RHEA:21652\n-xref: UM-BBD_reactionID:r0632\n+xref: MetaCyc:RXN-13706\n+xref: RHEA:53736\n is_a: GO:0016708 ! oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, NAD(P)H as one donor, and incorporation of two atoms of oxygen into one donor\n+property_value: term_tracker_item \"https://github.com/geneontology/go-ontology/issues/30179\" xsd:anyURI\n \n [Term]\n id: GO:0018627\n",
+  "diff_size_chars": 1422,
+  "diff_size_lines": 27,
+  "linked_issues": [
+    {
+      "number": 30179,
+      "title": "resolve EC:1.14.12.13 mapping",
+      "body": "![Image](https://github.com/user-attachments/assets/d3339a95-e9bc-4b7b-85ce-09fc5346bfda)\n\nMethod: exhaustive search\nScore: -3.598673186227787\nEstimated probability: 0.23003291589421512\nConfidence: 0.5\nSubsequent scores (max 10): -3.598673186227787, -4.058205515606227, -4.291820366787732, -4.291820366787733, -5.495793171113668, -5.495793171113668, -5.729408022295173, -5.729408022295173, -5.729408022295173, -6.422555202855119\n\n- [a 2-halobenzoate + NADH + O2 + H(+) = a halide anion + catechol + CO2 + NAD(+)](http://rdf.rhea-db.org/53736) ProperSubClassOf [2-halobenzoate 1,2-dioxygenase](http://purl.uniprot.org/enzyme/1.14.12.13)\t(most probable)\t0.6\n- [2-chlorobenzoate + NADH + O2 + H(+) = catechol + chloride + CO2 + NAD(+)](http://rdf.rhea-db.org/21652) ProperSubClassOf [2-halobenzoate 1,2-dioxygenase](http://purl.uniprot.org/enzyme/1.14.12.13)\t(most probable)\t0.6\n- [2-chlorobenzoate 1,2-dioxygenase activity](http://purl.obolibrary.org/obo/GO_0018626) EquivalentTo [2-chlorobenzoate + NADH + O2 + H(+) = catechol + chloride + CO2 + NAD(+)](http://rdf.rhea-db.org/21652)\t(most probable)\t0.8\n- [2-chlorobenzoate 1,2-dioxygenase activity](http://purl.obolibrary.org/obo/GO_0018626) ProperSubClassOf [2-halobenzoate 1,2-dioxygenase](http://purl.uniprot.org/enzyme/1.14.12.13)\t\t0.095",
+      "url": "https://github.com/geneontology/go-ontology/issues/30179",
+      "state": "CLOSED",
+      "author": "balhoff",
+      "created_at": "2025-04-24T17:31:18+00:00",
+      "updated_at": "2025-06-06T09:27:08+00:00",
+      "labels": [
+        "go2rhea",
+        "xref & mappings",
+        "boomer"
+      ],
+      "comments": [
+        {
+          "id": "IC_kwDOAkAHws6vhz4L",
+          "author": "sjm41",
+          "body": "id: GO:0018626\nname: 2-chlorobenzoate 1,2-dioxygenase activity\nnamespace: molecular_function\ndef: \"Catalysis of the reaction: 2-chlorobenzoate + NADH + H+ + O2 = catechol + chloride + NAD+ + CO2.\" [EC:1.14.12.13]\nsynonym: \"2-chlorobenzoate,NADH:oxygen oxidoreductase (1,2-hydroxylating, dechlorinating, decarboxylating)\" RELATED [EC:1.14.12.13]\nsynonym: \"2-halobenzoate 1,2-dioxygenase activity\" EXACT []\nxref: EC:1.14.12.13\nxref: MetaCyc:2-CHLOROBENZOATE-12-DIOXYGENASE-RXN\nxref: RHEA:21652\nxref: UM-BBD_reactionID:r0632\nis_a: GO:0016708 ! oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, NAD(P)H as one donor, and incorporation of two atoms of oxygen into one donor\n\n\nEC:1.14.12.13\na 2-halobenzoate + NADH + O2 + H(+) = a halide anion + catechol + CO2 + NAD(+)\n\nRHEA:53736\na 2-halobenzoate + NADH + O2 + H+ = a halide anion + catechol + CO2 + NAD+\n\nRHEA:21652 (specific form of RHEA:53736)\n2-chlorobenzoate + NADH + O2 + H+ = catechol + chloride + CO2 + NAD+\n\n---\n\n- [x] Change RHEA xref to RHEA:53736 and update def to match\n- [x] Change label to 2-halobenzoate 1,2-dioxygenase activity (which would match current EC)\n- [x] Change MetaCyc xref to RXN-13706",
+          "created_at": "2025-06-05T14:52:32+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30179#issuecomment-2944876043"
+        }
+      ],
+      "assignees": null
+    }
+  ],
+  "input_text": "## Issue 30179\nAuthor: balhoff\nBody:\n<body>\n![Image](https://github.com/user-attachments/assets/d3339a95-e9bc-4b7b-85ce-09fc5346bfda)\n\nMethod: exhaustive search\nScore: -3.598673186227787\nEstimated probability: 0.23003291589421512\nConfidence: 0.5\nSubsequent scores (max 10): -3.598673186227787, -4.058205515606227, -4.291820366787732, -4.291820366787733, -5.495793171113668, -5.495793171113668, -5.729408022295173, -5.729408022295173, -5.729408022295173, -6.422555202855119\n\n- [a 2-halobenzoate + NADH + O2 + H(+) = a halide anion + catechol + CO2 + NAD(+)](http://rdf.rhea-db.org/53736) ProperSubClassOf [2-halobenzoate 1,2-dioxygenase](http://purl.uniprot.org/enzyme/1.14.12.13)\t(most probable)\t0.6\n- [2-chlorobenzoate + NADH + O2 + H(+) = catechol + chloride + CO2 + NAD(+)](http://rdf.rhea-db.org/21652) ProperSubClassOf [2-halobenzoate 1,2-dioxygenase](http://purl.uniprot.org/enzyme/1.14.12.13)\t(most probable)\t0.6\n- [2-chlorobenzoate 1,2-dioxygenase activity](http://purl.obolibrary.org/obo/GO_0018626) EquivalentTo [2-chlorobenzoate + NADH + O2 + H(+) = catechol + chloride + CO2 + NAD(+)](http://rdf.rhea-db.org/21652)\t(most probable)\t0.8\n- [2-chlorobenzoate 1,2-dioxygenase activity](http://purl.obolibrary.org/obo/GO_0018626) ProperSubClassOf [2-halobenzoate 1,2-dioxygenase](http://purl.uniprot.org/enzyme/1.14.12.13)\t\t0.095\n</body>\n\nComment:\nAuthor: sjm41\n<comment>\nid: GO:0018626\nname: 2-chlorobenzoate 1,2-dioxygenase activity\nnamespace: molecular_function\ndef: \"Catalysis of the reaction: 2-chlorobenzoate + NADH + H+ + O2 = catechol + chloride + NAD+ + CO2.\" [EC:1.14.12.13]\nsynonym: \"2-chlorobenzoate,NADH:oxygen oxidoreductase (1,2-hydroxylating, dechlorinating, decarboxylating)\" RELATED [EC:1.14.12.13]\nsynonym: \"2-halobenzoate 1,2-dioxygenase activity\" EXACT []\nxref: EC:1.14.12.13\nxref: MetaCyc:2-CHLOROBENZOATE-12-DIOXYGENASE-RXN\nxref: RHEA:21652\nxref: UM-BBD_reactionID:r0632\nis_a: GO:0016708 ! oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, NAD(P)H as one donor, and incorporation of two atoms of oxygen into one donor\n\n\nEC:1.14.12.13\na 2-halobenzoate + NADH + O2 + H(+) = a halide anion + catechol + CO2 + NAD(+)\n\nRHEA:53736\na 2-halobenzoate + NADH + O2 + H+ = a halide anion + catechol + CO2 + NAD+\n\nRHEA:21652 (specific form of RHEA:53736)\n2-chlorobenzoate + NADH + O2 + H+ = catechol + chloride + CO2 + NAD+\n\n---\n\n- [x] Change RHEA xref to RHEA:53736 and update def to match\n- [x] Change label to 2-halobenzoate 1,2-dioxygenase activity (which would match current EC)\n- [x] Change MetaCyc xref to RXN-13706\n</comment>",
+  "issue_labels": [
+    "go2rhea",
+    "xref & mappings",
+    "boomer"
+  ],
+  "predicted_diff": "diff --git a/src/ontology/go-edit.obo b/src/ontology/go-edit.obo\nindex 1788a8d43..843677844 100644\n--- a/src/ontology/go-edit.obo\n+++ b/src/ontology/go-edit.obo\n@@ -135285,14 +135285,14 @@ is_a: GO:0016708 ! oxidoreductase activity, acting on paired donors, with incorp\n \n [Term]\n id: GO:0018626\n-name: 2-chlorobenzoate 1,2-dioxygenase activity\n+name: 2-halobenzoate 1,2-dioxygenase activity\n namespace: molecular_function\n-def: \"Catalysis of the reaction: 2-chlorobenzoate + NADH + H+ + O2 = catechol + chloride + NAD+ + CO2.\" [EC:1.14.12.13]\n+def: \"Catalysis of the reaction: 2-halobenzoate + NADH + H+ + O2 = halide anion + catechol + NAD+ + CO2.\" [EC:1.14.12.13]\n synonym: \"2-chlorobenzoate,NADH:oxygen oxidoreductase (1,2-hydroxylating, dechlorinating, decarboxylating)\" RELATED [EC:1.14.12.13]\n-synonym: \"2-halobenzoate 1,2-dioxygenase activity\" EXACT []\n+synonym: \"2-chlorobenzoate 1,2-dioxygenase activity\" EXACT []\n xref: EC:1.14.12.13\n-xref: MetaCyc:2-CHLOROBENZOATE-12-DIOXYGENASE-RXN\n-xref: RHEA:21652\n+xref: MetaCyc:RXN-13706\n+xref: RHEA:53736\n xref: UM-BBD_reactionID:r0632\n is_a: GO:0016708 ! oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, NAD(P)H as one donor, and incorporation of two atoms of oxygen into one donor\n \n",
+  "predicted_diff_identical": false,
+  "predicted_diff_metadiff": [
+    "--- \n",
+    "+++ \n",
+    "@@ -1,8 +1,8 @@\n",
+    " diff --git a/src/ontology/go-edit.obo b/src/ontology/go-edit.obo",
+    "-index 35e999454..ede916f78 100644",
+    "+index 1788a8d43..843677844 100644",
+    " --- a/src/ontology/go-edit.obo",
+    " +++ b/src/ontology/go-edit.obo",
+    "-@@ -135286,16 +135286,16 @@ is_a: GO:0016708 ! oxidoreductase activity, acting on paired donors, with incorp",
+    "+@@ -135285,14 +135285,14 @@ is_a: GO:0016708 ! oxidoreductase activity, acting on paired donors, with incorp",
+    "  ",
+    "  [Term]",
+    "  id: GO:0018626",
+    "@@ -10,18 +10,15 @@\n",
+    " +name: 2-halobenzoate 1,2-dioxygenase activity",
+    "  namespace: molecular_function",
+    " -def: \"Catalysis of the reaction: 2-chlorobenzoate + NADH + H+ + O2 = catechol + chloride + NAD+ + CO2.\" [EC:1.14.12.13]",
+    "-+def: \"Catalysis of the reaction: a 2-halobenzoate + NADH + O2 + H+ = a halide anion + catechol + CO2 + NAD+.\" [RHEA:53736]",
+    "-+synonym: \"2-chlorobenzoate 1,2-dioxygenase activity\" NARROW []",
+    "++def: \"Catalysis of the reaction: 2-halobenzoate + NADH + H+ + O2 = halide anion + catechol + NAD+ + CO2.\" [EC:1.14.12.13]",
+    "  synonym: \"2-chlorobenzoate,NADH:oxygen oxidoreductase (1,2-hydroxylating, dechlorinating, decarboxylating)\" RELATED [EC:1.14.12.13]",
+    " -synonym: \"2-halobenzoate 1,2-dioxygenase activity\" EXACT []",
+    "++synonym: \"2-chlorobenzoate 1,2-dioxygenase activity\" EXACT []",
+    "  xref: EC:1.14.12.13",
+    " -xref: MetaCyc:2-CHLOROBENZOATE-12-DIOXYGENASE-RXN",
+    " -xref: RHEA:21652",
+    "--xref: UM-BBD_reactionID:r0632",
+    " +xref: MetaCyc:RXN-13706",
+    " +xref: RHEA:53736",
+    "+ xref: UM-BBD_reactionID:r0632",
+    "  is_a: GO:0016708 ! oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, NAD(P)H as one donor, and incorporation of two atoms of oxygen into one donor",
+    "-+property_value: term_tracker_item \"https://github.com/geneontology/go-ontology/issues/30179\" xsd:anyURI",
+    "  ",
+    "- [Term]",
+    "- id: GO:0018627"
+  ],
+  "predicted_diff_similarity": 0.5714285714285714,
+  "predicted_diff_changes_in_common": [
+    [
+      -1,
+      "synonym: \"2-halobenzoate 1,2-dioxygenase activity\" EXACT []"
+    ],
+    [
+      -1,
+      "xref: MetaCyc:NNNNNNN-CHLOROBENZOATE-12-DIOXYGENASE-RXN"
+    ],
+    [
+      -1,
+      "def: \"Catalysis of the reaction: 2-chlorobenzoate + NADH + H+ + O2 = catechol + chloride + NAD+ + CO2.\" [EC:NNNNNNN.14.12.13]"
+    ],
+    [
+      1,
+      "name: 2-halobenzoate 1,2-dioxygenase activity"
+    ],
+    [
+      -1,
+      "xref: RHEA:NNNNNNN"
+    ],
+    [
+      1,
+      "xref: MetaCyc:RXN-13706"
+    ],
+    [
+      1,
+      "xref: RHEA:NNNNNNN"
+    ],
+    [
+      -1,
+      "name: 2-chlorobenzoate 1,2-dioxygenase activity"
+    ]
+  ],
+  "changes_unique_to_target": [
+    [
+      -1,
+      "xref: UM-BBD_reactionID:r0632"
+    ],
+    [
+      1,
+      "def: \"Catalysis of the reaction: a 2-halobenzoate + NADH + O2 + H+ = a halide anion + catechol + CO2 + NAD+.\" [RHEA:NNNNNNN]"
+    ],
+    [
+      1,
+      "property_value: term_tracker_item \"https://github.com/geneontology/go-ontology/issues/30179\" xsd:anyURI"
+    ],
+    [
+      1,
+      "synonym: \"2-chlorobenzoate 1,2-dioxygenase activity\" NARROW []"
+    ]
+  ],
+  "changes_unique_to_prediction": [
+    [
+      1,
+      "synonym: \"2-chlorobenzoate 1,2-dioxygenase activity\" EXACT []"
+    ],
+    [
+      1,
+      "def: \"Catalysis of the reaction: 2-halobenzoate + NADH + H+ + O2 = halide anion + catechol + NAD+ + CO2.\" [EC:NNNNNNN.14.12.13]"
+    ]
+  ],
+  "agent_stdout": "starting session | provider: openai model: anthropic/claude-sonnet\n\n    logging to ./.local/share/goose/sessions/20250608_004850.jsonl\n\n    working directory: /Users/cjm/repos/ontobench/workdir/go-ontology\n\n\u001b[38;2;222;222;222mI'll help you resolve this GO ontology issue. Based on the comment from sjm41, I need to make three changes to GO:0018626:\u001b[0m\n\n\n\n\u001b[38;2;222;222;222m1\u001b[0m\u001b[1;38;2;222;222;222m.\u001b[0m\u001b[38;2;222;222;222m \u001b[0m\u001b[38;2;222;222;222mChange the RHEA xref to RHEA:53736 and update the definition to match\u001b[0m\n\n\u001b[38;2;222;222;222m2\u001b[0m\u001b[1;38;2;222;222;222m.\u001b[0m\u001b[38;2;222;222;222m Change the label to \"2-halobenzoate 1,2-dioxygenase activity\"\u001b[0m\n\n\u001b[38;2;222;222;222m3\u001b[0m\u001b[1;38;2;222;222;222m.\u001b[0m\u001b[38;2;222;222;222m Change the MetaCyc xref to RXN-13706\u001b[0m\n\n\n\n\u001b[38;2;222;222;222mLet me start by examining the current term and then making the necessary changes.\u001b[0m\n\n─── shell | developer ──────────────────────────\n\ncommand: obo-grep.pl --noheader -r 'id: GO:0018626' src/ontology/go-edit.obo\n\n\n\n\n\n\u001b[38;2;222;222;222m[Term]\u001b[0m\n\n\u001b[38;2;222;222;222mid: GO:0018626\u001b[0m\n\n\u001b[38;2;222;222;222mname: 2-chlorobenzoate 1,2-dioxygenase activity\u001b[0m\n\n\u001b[38;2;222;222;222mnamespace: molecular_function\u001b[0m\n\n\u001b[38;2;222;222;222mdef: \"Catalysis of the reaction: 2-chlorobenzoate + NADH + H+ + O2 = catechol + chloride + NAD+ + CO2.\" [EC:1.14.12.13]\u001b[0m\n\n\u001b[38;2;222;222;222msynonym: \"2-chlorobenzoate,NADH:oxygen oxidoreductase (1,2-hydroxylating, dechlorinating, decarboxylating)\" RELATED [EC:1.14.12.13]\u001b[0m\n\n\u001b[38;2;222;222;222msynonym: \"2-halobenzoate 1,2-dioxygenase activity\" EXACT []\u001b[0m\n\n\u001b[38;2;222;222;222mxref: EC:1.14.12.13\u001b[0m\n\n\u001b[38;2;222;222;222mxref: MetaCyc:2-CHLOROBENZOATE-12-DIOXYGENASE-RXN\u001b[0m\n\n\u001b[38;2;222;222;222mxref: RHEA:21652\u001b[0m\n\n\u001b[38;2;222;222;222mxref: UM-BBD_reactionID:r0632\u001b[0m\n\n\u001b[38;2;222;222;222mis_a: GO:0016708 ! oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, NAD(P)H as one donor, and incorporation of two atoms of oxygen into one donor\u001b[0m\n\n\n\n\n\n\u001b[38;2;222;222;222mNow I'll check out this term for editing:\u001b[0m\n\n─── shell | developer ──────────────────────────\n\ncommand: obo-checkout.pl src/ontology/go-edit.obo GO:0018626\n\n\n\n\n\n\u001b[38;2;222;222;222mReading src/ontology/go-edit.obo\u001b[0m\n\n\u001b[38;2;222;222;222mChecking out GO:0018626 to terms/GO_0018626.obo\u001b[0m\n\n\n\n\u001b[38;2;222;222;222mLet me view the checked-out term file:\u001b[0m\n\n─── text_editor | developer ──────────────────────────\n\npath: /U/c/r/o/w/g/terms/GO_0018626.obo\n\ncommand: view\n\n\n\n\n\n\u001b[1;38;2;222;222;222m###\u001b[0m\u001b[1;38;2;222;222;222m \u001b[0m\u001b[1;38;2;222;222;222m/Users/cjm/repos/ontobench/workdir/go-ontology/terms/GO_0018626.obo\u001b[0m\n\n\u001b[38;2;222;222;222m```\u001b[0m\n\n\u001b[38;2;222;222;222m[Term]\u001b[0m\n\n\u001b[38;2;222;222;222mid: GO:0018626\u001b[0m\n\n\u001b[38;2;222;222;222mname: 2-chlorobenzoate 1,2-dioxygenase activity\u001b[0m\n\n\u001b[38;2;222;222;222mnamespace: molecular_function\u001b[0m\n\n\u001b[38;2;222;222;222mdef: \"Catalysis of the reaction: 2-chlorobenzoate + NADH + H+ + O2 = catechol + chloride + NAD+ + CO2.\" [EC:1.14.12.13]\u001b[0m\n\n\u001b[38;2;222;222;222msynonym: \"2-chlorobenzoate,NADH:oxygen oxidoreductase (1,2-hydroxylating, dechlorinating, decarboxylating)\" RELATED [EC:1.14.12.13]\u001b[0m\n\n\u001b[38;2;222;222;222msynonym: \"2-halobenzoate 1,2-dioxygenase activity\" EXACT []\u001b[0m\n\n\u001b[38;2;222;222;222mxref: EC:1.14.12.13\u001b[0m\n\n\u001b[38;2;222;222;222mxref: MetaCyc:2-CHLOROBENZOATE-12-DIOXYGENASE-RXN\u001b[0m\n\n\u001b[38;2;222;222;222mxref: RHEA:21652\u001b[0m\n\n\u001b[38;2;222;222;222mxref: UM-BBD_reactionID:r0632\u001b[0m\n\n\u001b[38;2;222;222;222mis_a: GO:0016708 ! oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, NAD(P)H as one donor, and incorporation of two atoms of oxygen into one donor\u001b[0m\n\n\n\n\n\n\u001b[38;2;222;222;222m```\u001b[0m\n\n\n\n\u001b[38;2;222;222;222mNow I'll make the required changes based on the issue comments:\u001b[0m\n\n\n\n\u001b[38;2;222;222;222m1\u001b[0m\u001b[1;38;2;222;222;222m.\u001b[0m\u001b[38;2;222;222;222m \u001b[0m\u001b[38;2;222;222;222mChange the name from \"2-chlorobenzoate 1,2-dioxygenase activity\" to \"2-halobenzoate 1,2-dioxygenase activity\"\u001b[0m\n\n\u001b[38;2;222;222;222m2\u001b[0m\u001b[1;38;2;222;222;222m.\u001b[0m\u001b[38;2;222;222;222m Update the definition to match the broader RHEA:53736 reaction\u001b[0m\n\n\u001b[38;2;222;222;222m3\u001b[0m\u001b[1;38;2;222;222;222m.\u001b[0m\u001b[38;2;222;222;222m Change the RHEA xref from RHEA:21652 to RHEA:53736\u001b[0m\n\n\u001b[38;2;222;222;222m4\u001b[0m\u001b[1;38;2;222;222;222m.\u001b[0m\u001b[38;2;222;222;222m Change the MetaCyc xref from MetaCyc:2-CHLOROBENZOATE-12-DIOXYGENASE-RXN to MetaCyc:RXN-13706\u001b[0m\n\n─── text_editor | developer ──────────────────────────\n\npath: /U/c/r/o/w/g/terms/GO_0018626.obo\n\ncommand: str_replace\n\nnew_str: ...\n\nold_str: ...\n\n\n\n\n\n\u001b[38;2;222;222;222m```\u001b[0m\n\n\u001b[38;2;222;222;222m[Term]\u001b[0m\n\n\u001b[38;2;222;222;222mid: GO:0018626\u001b[0m\n\n\u001b[38;2;222;222;222mname: 2-halobenzoate 1,2-dioxygenase activity\u001b[0m\n\n\u001b[38;2;222;222;222mnamespace: molecular_function\u001b[0m\n\n\u001b[38;2;222;222;222mdef: \"Catalysis of the reaction: 2-halobenzoate + NADH + H+ + O2 = halide anion + catechol + NAD+ + CO2.\" [EC:1.14.12.13]\u001b[0m\n\n\u001b[38;2;222;222;222msynonym: \"2-chlorobenzoate,NADH:oxygen oxidoreductase (1,2-hydroxylating, dechlorinating, decarboxylating)\" RELATED [EC:1.14.12.13]\u001b[0m\n\n\u001b[38;2;222;222;222msynonym: \"2-chlorobenzoate 1,2-dioxygenase activity\" EXACT []\u001b[0m\n\n\u001b[38;2;222;222;222mxref: EC:1.14.12.13\u001b[0m\n\n\u001b[38;2;222;222;222mxref: MetaCyc:RXN-13706\u001b[0m\n\n\u001b[38;2;222;222;222mxref: RHEA:53736\u001b[0m\n\n\u001b[38;2;222;222;222mxref: UM-BBD_reactionID:r0632\u001b[0m\n\n\u001b[38;2;222;222;222mis_a: GO:0016708 ! oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, NAD(P)H as one donor, and incorporation of two atoms of oxygen into one donor\u001b[0m\n\n\n\n\u001b[38;2;222;222;222m```\u001b[0m\n\n\n\n\u001b[38;2;222;222;222mLet me check the modified term to make sure it looks correct:\u001b[0m\n\n─── text_editor | developer ──────────────────────────\n\npath: /U/c/r/o/w/g/terms/GO_0018626.obo\n\ncommand: view\n\n\n\n\n\n\u001b[1;38;2;222;222;222m###\u001b[0m\u001b[1;38;2;222;222;222m \u001b[0m\u001b[1;38;2;222;222;222m/Users/cjm/repos/ontobench/workdir/go-ontology/terms/GO_0018626.obo\u001b[0m\n\n\u001b[38;2;222;222;222m```\u001b[0m\n\n\u001b[38;2;222;222;222m[Term]\u001b[0m\n\n\u001b[38;2;222;222;222mid: GO:0018626\u001b[0m\n\n\u001b[38;2;222;222;222mname: 2-halobenzoate 1,2-dioxygenase activity\u001b[0m\n\n\u001b[38;2;222;222;222mnamespace: molecular_function\u001b[0m\n\n\u001b[38;2;222;222;222mdef: \"Catalysis of the reaction: 2-halobenzoate + NADH + H+ + O2 = halide anion + catechol + NAD+ + CO2.\" [EC:1.14.12.13]\u001b[0m\n\n\u001b[38;2;222;222;222msynonym: \"2-chlorobenzoate,NADH:oxygen oxidoreductase (1,2-hydroxylating, dechlorinating, decarboxylating)\" RELATED [EC:1.14.12.13]\u001b[0m\n\n\u001b[38;2;222;222;222msynonym: \"2-chlorobenzoate 1,2-dioxygenase activity\" EXACT []\u001b[0m\n\n\u001b[38;2;222;222;222mxref: EC:1.14.12.13\u001b[0m\n\n\u001b[38;2;222;222;222mxref: MetaCyc:RXN-13706\u001b[0m\n\n\u001b[38;2;222;222;222mxref: RHEA:53736\u001b[0m\n\n\u001b[38;2;222;222;222mxref: UM-BBD_reactionID:r0632\u001b[0m\n\n\u001b[38;2;222;222;222mis_a: GO:0016708 ! oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, NAD(P)H as one donor, and incorporation of two atoms of oxygen into one donor\u001b[0m\n\n\n\n\n\n\u001b[38;2;222;222;222m```\u001b[0m\n\n\n\n\u001b[38;2;222;222;222mNow I'll check the term back into the main ontology file:\u001b[0m\n\n─── shell | developer ──────────────────────────\n\ncommand: obo-checkin.pl src/ontology/go-edit.obo GO:0018626\n\n\n\n\n\n\n\n\u001b[38;2;222;222;222mLet me verify that the changes were successfully checked in by viewing the updated term in the main ontology:\u001b[0m\n\n─── shell | developer ──────────────────────────\n\ncommand: obo-grep.pl --noheader -r 'id: GO:0018626' src/ontology/go-edit.obo\n\n\n\n\n\n\u001b[38;2;222;222;222m[Term]\u001b[0m\n\n\u001b[38;2;222;222;222mid: GO:0018626\u001b[0m\n\n\u001b[38;2;222;222;222mname: 2-halobenzoate 1,2-dioxygenase activity\u001b[0m\n\n\u001b[38;2;222;222;222mnamespace: molecular_function\u001b[0m\n\n\u001b[38;2;222;222;222mdef: \"Catalysis of the reaction: 2-halobenzoate + NADH + H+ + O2 = halide anion + catechol + NAD+ + CO2.\" [EC:1.14.12.13]\u001b[0m\n\n\u001b[38;2;222;222;222msynonym: \"2-chlorobenzoate,NADH:oxygen oxidoreductase (1,2-hydroxylating, dechlorinating, decarboxylating)\" RELATED [EC:1.14.12.13]\u001b[0m\n\n\u001b[38;2;222;222;222msynonym: \"2-chlorobenzoate 1,2-dioxygenase activity\" EXACT []\u001b[0m\n\n\u001b[38;2;222;222;222mxref: EC:1.14.12.13\u001b[0m\n\n\u001b[38;2;222;222;222mxref: MetaCyc:RXN-13706\u001b[0m\n\n\u001b[38;2;222;222;222mxref: RHEA:53736\u001b[0m\n\n\u001b[38;2;222;222;222mxref: UM-BBD_reactionID:r0632\u001b[0m\n\n\u001b[38;2;222;222;222mis_a: GO:0016708 ! oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, NAD(P)H as one donor, and incorporation of two atoms of oxygen into one donor\u001b[0m\n\n\n\n\n\n\u001b[38;2;222;222;222mPerfect! Let me also validate the syntax to make sure the changes don't introduce any errors:\u001b[0m\n\n─── shell | developer ──────────────────────────\n\ncommand: cd /Users/cjm/repos/ontobench/workdir/go-ontology && robot convert --catalog src/ontology/catalog-v001.xml -i src/ontology/go-edit.obo -f obo -o go-edit.TMP.obo\n\n\n\n\n\n\n\n\u001b[38;2;222;222;222mExcellent! The syntax validation passed without errors. Let me clean up the temporary file:\u001b[0m\n\n─── shell | developer ──────────────────────────\n\ncommand: rm -f go-edit.TMP.obo\n\n\n\n\n\n\n\n\u001b[1;38;2;215;205;143m##\u001b[0m\u001b[1;38;2;215;205;143m \u001b[0m\u001b[1;38;2;215;205;143mSummary\u001b[0m\n\n\n\n\u001b[38;2;222;222;222mI have successfully resolved issue #30179 by making the following changes to GO:0018626:\u001b[0m\n\n\n\n\u001b[1;38;2;222;222;222m###\u001b[0m\u001b[1;38;2;222;222;222m \u001b[0m\u001b[1;38;2;222;222;222mChanges Made:\u001b[0m\n\n\n\n\u001b[38;2;222;222;222m1\u001b[0m\u001b[1;38;2;222;222;222m.\u001b[0m\u001b[38;2;222;222;222m \u001b[0m\u001b[1;38;2;222;222;222m**\u001b[0m\u001b[1;38;2;222;222;222mChanged the term name\u001b[0m\u001b[1;38;2;222;222;222m**\u001b[0m\u001b[38;2;222;222;222m from \"2-chlorobenzoate 1,2-dioxygenase activity\" to \"2-halobenzoate 1,2-dioxygenase activity\" to match the broader enzyme classification (EC:1.14.12.13)\u001b[0m\n\n\n\n\u001b[38;2;222;222;222m2\u001b[0m\u001b[1;38;2;222;222;222m.\u001b[0m\u001b[38;2;222;222;222m \u001b[0m\u001b[1;38;2;222;222;222m**\u001b[0m\u001b[1;38;2;222;222;222mUpdated the definition\u001b[0m\u001b[1;38;2;222;222;222m**\u001b[0m\u001b[38;2;222;222;222m from the specific reaction:\u001b[0m\n\n\u001b[38;2;222;222;222m   \u001b[0m\u001b[1;38;2;222;222;222m-\u001b[0m\u001b[38;2;222;222;222m \u001b[0m\u001b[38;2;254;214;175m`\u001b[0m\u001b[38;2;254;214;175m\"Catalysis of the reaction: 2-chlorobenzoate + NADH + H+ + O2 = catechol + chloride + NAD+ + CO2.\"\u001b[0m\u001b[38;2;254;214;175m`\u001b[0m\n\n\u001b[38;2;222;222;222m   \u001b[0m\n\n\u001b[38;2;222;222;222m   \u001b[0m\u001b[38;2;222;222;222mTo the broader reaction:\u001b[0m\n\n\u001b[38;2;222;222;222m   \u001b[0m\u001b[1;38;2;222;222;222m-\u001b[0m\u001b[38;2;222;222;222m \u001b[0m\u001b[38;2;254;214;175m`\u001b[0m\u001b[38;2;254;214;175m\"Catalysis of the reaction: 2-halobenzoate + NADH + H+ + O2 = halide anion + catechol + NAD+ + CO2.\"\u001b[0m\u001b[38;2;254;214;175m`\u001b[0m\n\n\n\n\u001b[38;2;222;222;222m3\u001b[0m\u001b[1;38;2;222;222;222m.\u001b[0m\u001b[38;2;222;222;222m \u001b[0m\u001b[1;38;2;222;222;222m**\u001b[0m\u001b[1;38;2;222;222;222mUpdated the RHEA xref\u001b[0m\u001b[1;38;2;222;222;222m**\u001b[0m\u001b[38;2;222;222;222m from RHEA:21652 (specific for 2-chlorobenzoate) to RHEA:53736 (general for 2-halobenzoate)\u001b[0m\n\n\n\n\u001b[38;2;222;222;222m4\u001b[0m\u001b[1;38;2;222;222;222m.\u001b[0m\u001b[38;2;222;222;222m \u001b[0m\u001b[1;38;2;222;222;222m**\u001b[0m\u001b[1;38;2;222;222;222mUpdated the MetaCyc xref\u001b[0m\u001b[1;38;2;222;222;222m**\u001b[0m\u001b[38;2;222;222;222m from MetaCyc:2-CHLOROBENZOATE-12-DIOXYGENASE-RXN to MetaCyc:RXN-13706\u001b[0m\n\n\n\n\u001b[38;2;222;222;222m5\u001b[0m\u001b[1;38;2;222;222;222m.\u001b[0m\u001b[38;2;222;222;222m \u001b[0m\u001b[1;38;2;222;222;222m**\u001b[0m\u001b[1;38;2;222;222;222mMaintained existing synonyms\u001b[0m\u001b[1;38;2;222;222;222m**\u001b[0m\u001b[38;2;222;222;222m, with the original \"2-chlorobenzoate 1,2-dioxygenase activity\" now as an EXACT synonym, which is appropriate since it represents a specific case of the broader activity.\u001b[0m\n\n\n\n\u001b[1;38;2;222;222;222m###\u001b[0m\u001b[1;38;2;222;222;222m \u001b[0m\u001b[1;38;2;222;222;222mRationale:\u001b[0m\n\n\n\n\u001b[38;2;222;222;222mThese changes align the GO term with the broader enzyme classification EC:1.14.12.13, which catalyzes reactions with various 2-halobenzoates, not just 2-chlorobenzoate. The term now properly represents the general enzyme activity while maintaining the specific case as a synonym. This resolves the ontology alignment issues identified in the original issue.\u001b[0m\n\n\n\n\u001b[38;2;222;222;222mThe syntax validation passed successfully, confirming that all changes are properly formatted according to OBO standards.\u001b[0m\n",
+  "agent_stderr": "",
+  "comparisons": {
+    "metadiff_judge": {
+      "similarity": 0.5714285714285714
+    }
+  },
+  "part_of_epic": false
+}

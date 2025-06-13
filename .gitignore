@@ -1,3 +1,22 @@
+diffs.md
+*.sqlite
+results.*
+
+
+.cache/
+.memory/
+.cursor/
+.env.example
+.roo/
+.taskmaster/
+benchmark.json
+experiments/*/results/
+stats
+
+workdir/
+.roomodes
+.windsurfrules
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -128,4 +147,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 src/llm_change_agent/evaluations/input/*.yaml
-!src/llm_change_agent/evaluations/input/evaluation_prs.yaml
+!tests/kgcl/input/evaluation_prs.yaml

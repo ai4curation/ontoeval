@@ -1,0 +1,261 @@
+{
+  "number": 30431,
+  "title": "Correcting term label. Fixes #30051",
+  "body": "",
+  "url": "https://github.com/geneontology/go-ontology/pull/30431",
+  "state": "MERGED",
+  "author": "sjm41",
+  "created_at": "2025-06-06T10:52:52+00:00",
+  "updated_at": "2025-06-06T11:01:49+00:00",
+  "labels": [],
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws6vxIDN",
+      "author": "github-actions",
+      "body": "<!-- GITHUB_ACTION_COMMENT_PR -->\nHere's a diff of how these changes impact the classified ontology: \n\n# Ontology comparison\n\n## Left\n- Ontology IRI: `http://purl.obolibrary.org/obo/go.owl`\n- Version IRI: `http://purl.obolibrary.org/obo/go/releases/2025-06-06/go.owl`\n- Loaded from: `file:/__w/go-ontology/go-ontology/src/ontology/../../reasoned-master.owl/reasoned.owl`\n\n## Right\n- Ontology IRI: `http://purl.obolibrary.org/obo/go.owl`\n- Version IRI: `http://purl.obolibrary.org/obo/go/releases/2025-06-06/go.owl`\n- Loaded from: `file:/__w/go-ontology/go-ontology/src/ontology/../../reasoned-pr.owl/reasoned.owl`\n\n### Ontology imports \n\n\n\n### Ontology annotations \n\n\n\n### positive regulation of acetyl-CoA biosynthetic process from pyruvate `http://purl.obolibrary.org/obo/GO_0140176`\n#### Removed\n- [positive regulation of acetyl-CoA biosynthetic process from pyruvate](http://purl.obolibrary.org/obo/GO_0140176) [label](http://www.w3.org/2000/01/rdf-schema#label) \"positive regulation of acetyl-CoA biosynthetic process from pyruvate\" \n\n#### Added\n- [positive regulation of acetyl-CoA biosynthetic process from pyruvate](http://purl.obolibrary.org/obo/GO_0140176) [label](http://www.w3.org/2000/01/rdf-schema#label) \"positive regulation of pyruvate decarboxylation to acetyl-CoA\" \n",
+      "created_at": "2025-06-06T11:00:04+00:00",
+      "url": "https://github.com/geneontology/go-ontology/pull/30431#issuecomment-2948890829"
+    }
+  ],
+  "assignees": null,
+  "repo": "geneontology/go-ontology",
+  "pr_number": 30431,
+  "head_commit": "d06f376bbb72773e718b2c98dce0a0fd266dde4b",
+  "base_commit": "3a919a2a2a243cd6f2aa9140f75532e8e6346e01",
+  "files_changed": [
+    "src/ontology/go-edit.obo"
+  ],
+  "commits": [
+    "Correcting term label. Fixes #30051"
+  ],
+  "diff": "diff --git a/src/ontology/go-edit.obo b/src/ontology/go-edit.obo\nindex 0d82a4413..25baeffdb 100644\n--- a/src/ontology/go-edit.obo\n+++ b/src/ontology/go-edit.obo\n@@ -453822,7 +453822,7 @@ creation_date: 2025-05-20T08:52:20Z\n \n [Term]\n id: GO:0140176\n-name: positive regulation of acetyl-CoA biosynthetic process from pyruvate\n+name: positive regulation of pyruvate decarboxylation to acetyl-CoA\n namespace: biological_process\n def: \"Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of acetyl-CoA from pyruvate. In most organisms, this pathway links glycolysis to the TCA cycle, by a series of three reactions carried out by a multisubunit complex called the 'pyruvate dehydrogenase complex', even though pyruvate dehydrogenase activity describes only one of those reactions.\" [PMID:15855260]\n intersection_of: GO:0065007 ! biological regulation\n",
+  "diff_size_chars": 931,
+  "diff_size_lines": 13,
+  "linked_issues": [
+    {
+      "number": 30051,
+      "title": "NTR: positive regulation of acetyl-CoA biosynthetic process from pyruvate",
+      "body": "Please provide as much information as you can: \n\n* **Suggested term label:**\npositive regulation of acetyl-CoA biosynthetic process from pyruvate\n\n* **Definition (free text)**\nAny process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of acetyl-CoA from pyruvate. In most organisms, this pathway links glycolysis to the TCA cycle, by a series of three reactions carried out by a multisubunit complex called the 'pyruvate dehydrogenase complex', even though pyruvate dehydrogenase activity describes only one of those reactions.\n\n* **Reference, in format PMID:#######**\nPMID:15855260\n\n* **Gene product name and ID to be annotated to this term**\nhuman PDP1 (Q9P0J1)\n\n* **Parent term(s)**\nGO:0010510 regulation of pyruvate decarboxylation to acetyl-CoA\n\n",
+      "url": "https://github.com/geneontology/go-ontology/issues/30051",
+      "state": "CLOSED",
+      "author": "rozaru",
+      "created_at": "2025-04-04T14:03:25+00:00",
+      "updated_at": "2025-06-06T14:33:58+00:00",
+      "labels": [
+        "New term request",
+        "waiting for feedback",
+        "discuss",
+        "mitochondrion"
+      ],
+      "comments": [
+        {
+          "id": "IC_kwDOAkAHws6lootS",
+          "author": "ValWood",
+          "body": "\nWe captured this as part_of with direct positive regulation/activation\nhttps://www.pombase.org/gocam/gene/67086be200000251/SPAC10F6.17c/ptc5\n\nIs this not the correct way to do this?\nI'm constantly confused by this so it would be useful if we can get an answer when we meet in Geneva.\n\n\n\n\n\n\n",
+          "created_at": "2025-04-04T14:27:53+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2778893138"
+        },
+        {
+          "id": "IC_kwDOAkAHws6loqXN",
+          "author": "ValWood",
+          "body": "My understanding is that pathway regulation is part of the regulation of activity. So this one depends on the pathway start, I guess.",
+          "created_at": "2025-04-04T14:30:12+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2778899917"
+        },
+        {
+          "id": "IC_kwDOAkAHws6losc_",
+          "author": "pgaudet",
+          "body": "If I am not mistaken, the pombe orthologs is [pkp1 Spom](https://www.pombase.org/gene/SPAC644.11c)\n\nWhich you have annotated to a regulation BP:\n> [pyruvate dehydrogenase (acetyl-transferring) kinase activity](http://amigo.geneontology.org/amigo/term/GO:0004740)\npart of\n[regulation of acetyl-CoA biosynthetic process from pyruvate](http://amigo.geneontology.org/amigo/term/GO:0010510)\noccurs in\n[mitochondrion](http://amigo.geneontology.org/amigo/term/GO:0005739)\n\nSo, the positive regulation seems more appropriate? ",
+          "created_at": "2025-04-04T14:33:01+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2778908479"
+        },
+        {
+          "id": "IC_kwDOAkAHws6lo_zQ",
+          "author": "ValWood",
+          "body": "The pdp1 ortholog is ptc5\npyruvate decarboxylation to acetyl-CoA\nmitochondrial pyruvate dehydrogenase (lipoamide) phosphatase\n\nwhich we have annotated to part_of\n\nPkp1 is the phosphate we have annotated to \"regulation\" so yes this is inconsistent.\n\nThis one of the questions I wanted to ask, should these be annotated to regulation  if they are considered part of the pathway?\n\nThese 2 regulators are both 'downstream' of pyruvate, so they must be part_of the pathway.\n\nHow does this differ from any other enzyme activator or inhibitor? We don't annotate these to +/- regulation of process?\n",
+          "created_at": "2025-04-04T15:00:14+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2778987728"
+        },
+        {
+          "id": "IC_kwDOAkAHws6lpB-V",
+          "author": "ValWood",
+          "body": "For example here:\nhttps://www.pombase.org/gocam/gene/6690711d00002706/SPBC14C8.04/ilv6\nis an activator of Ilv1 but I annotated as part_of  the amino acid biosynthesis pathways rather than \n\"regulation of\"\nhttps://www.pombase.org/gene/SPBC14C8.04",
+          "created_at": "2025-04-04T15:03:48+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2778996629"
+        },
+        {
+          "id": "IC_kwDOAkAHws6lpHTR",
+          "author": "rozaru",
+          "body": "> Is this not the correct way to do this?\n> I'm constantly confused by this so it would be useful if we can get an answer when we meet in Geneva.\n\nWhen I started to make GO_CAM I asked about the difference between the regulatory terms for single annotation and the regulation relationship used in GO CAM. Someone (unfortunately I don’t remember who) said that they are 2 different type of annotations and I should carry on using regulatory terms for single annotation. Is this not true anymore?\n\nI agree with Val it would be good to know\n\n- where to draw the line between part of a pathway and regulates a pathway for enzymes that directly affects the activity of the main participants of a pathway \n- when to use enzyme regulator activity and regulation of activity\n\nFor the pyruvate decarboxylation to acetyl-CoA pathway:\n\n- pyruvate dehydrogenase kinase (PDK) phosphorylates and inhibits the E1 subunit of pyruvate dehydrogenase complex \nWhich annotation is appropriate:\nnegative regulation of pyruvate decarboxylation to acetyl-CoA pathway\nenzyme inhibitor activity\n\n- pyruvate dehydrogenase phosphatase (PDK) dephosphorylates and activates the E1 subunit of pyruvate dehydrogenase complex \nWhich annotation is appropriate:\npositive regulation of pyruvate decarboxylation to acetyl-CoA pathway\nenzyme activator activity\nIn fly this protein is involved in other pathways",
+          "created_at": "2025-04-04T15:12:38+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2779018449"
+        },
+        {
+          "id": "IC_kwDOAkAHws6lpj0q",
+          "author": "ValWood",
+          "body": "@pgaudet  can we put this high on the agenda for the GO-CAM meeting day. The guidelines here are very unclear.",
+          "created_at": "2025-04-04T15:43:14+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2779135274"
+        },
+        {
+          "id": "IC_kwDOAkAHws6l74BP",
+          "author": "pgaudet",
+          "body": "Added, thanks for the suggestion.",
+          "created_at": "2025-04-07T16:28:36+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2783936591"
+        },
+        {
+          "id": "IC_kwDOAkAHws6sXWfY",
+          "author": "edwong57",
+          "body": "@pgaudet @ValWood Was this resolved at the GO meeting? Could you point me to the discussion/minutes?",
+          "created_at": "2025-05-19T17:41:12+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2891802584"
+        },
+        {
+          "id": "IC_kwDOAkAHws6sYzi-",
+          "author": "ValWood",
+          "body": "We didn't get through the presentations so there were no discussion on specific problems.\n\n@vanaukenk  can this be discussed  on a future GO-CAM call?",
+          "created_at": "2025-05-19T20:26:14+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2892183742"
+        },
+        {
+          "id": "IC_kwDOAkAHws6sZI9C",
+          "author": "vanaukenk",
+          "body": "@ValWood @rozaru - yes, we can definitely put this on a GO-CAM call agenda.\nThis coming Thursday, the 22nd, Paul D. is scheduled to speak, but we could have another call next week, if people want.",
+          "created_at": "2025-05-19T21:10:57+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2892271426"
+        },
+        {
+          "id": "IC_kwDOAkAHws6sZKXk",
+          "author": "ValWood",
+          "body": "I already have an immovable meeting next week \n3:00 PM–7:30 PM BST which is over the GO-CaM slot so maybe the week after?",
+          "created_at": "2025-05-19T21:14:16+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2892277220"
+        },
+        {
+          "id": "IC_kwDOAkAHws6sZLM_",
+          "author": "vanaukenk",
+          "body": "@ValWood  - sure we could plan for Thursday, June 5th.  Please confirm.  Thanks!",
+          "created_at": "2025-05-19T21:16:13+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2892280639"
+        },
+        {
+          "id": "IC_kwDOAkAHws6sZO6C",
+          "author": "edwong57",
+          "body": "@vanaukenk, June 5 works for me.",
+          "created_at": "2025-05-19T21:24:50+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2892295810"
+        },
+        {
+          "id": "IC_kwDOAkAHws6scLVJ",
+          "author": "ValWood",
+          "body": "I won't be able to confirm this date until the week starting June 6th. I'm officially on holiday for a couple weeks in June, but that week is the Elixir all-hands meeting, and I have committed to a workshop; I don't have the details yet. I will be working some days but not sure which ones.\n\n",
+          "created_at": "2025-05-20T06:05:04+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2893067593"
+        },
+        {
+          "id": "IC_kwDOAkAHws6uwD4J",
+          "author": "edwong57",
+          "body": "@ValWood have you figured a date that works for you to discuss this at a GO-CAM call?",
+          "created_at": "2025-06-02T17:57:22+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2931834377"
+        },
+        {
+          "id": "IC_kwDOAkAHws6vL3Ki",
+          "author": "pgaudet",
+          "body": "+[Term]\n+id: GO:0140176\n+name: positive regulation of acetyl-CoA biosynthetic process from pyruvate\n+namespace: biological_process\n+def: \"Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of acetyl-CoA from pyruvate. In most organisms, this pathway links glycolysis to the TCA cycle, by a series of three reactions carried out by a multisubunit complex called the 'pyruvate dehydrogenase complex', even though pyruvate dehydrogenase activity describes only one of those reactions.\" [PMID:15855260]\n+intersection_of: GO:0065007 ! biological regulation\n+intersection_of: positively_regulates GO:0006086 ! pyruvate decarboxylation to acetyl-CoA\n+property_value: term_tracker_item \"https://github.com/geneontology/go-ontology/issues/30051\" xsd:anyURI\n+created_by: pg\n+creation_date: 2025-06-04T08:32:15Z",
+          "created_at": "2025-06-04T08:34:24+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2939122338"
+        },
+        {
+          "id": "IC_kwDOAkAHws6vvBpD",
+          "author": "rozaru",
+          "body": "I am sorry I made a mistake in the name for the new GO term GO:0140176 positive regulation of acetyl-CoA biosynthetic process from pyruvate\n\nThe name should have been **positive regulation of pyruvate decarboxylation to acetyl-CoA**. Would it be possible to correct it? @pgaudet @sjm41 ",
+          "created_at": "2025-06-06T07:22:03+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2948340291"
+        },
+        {
+          "id": "IC_kwDOAkAHws6vvG2z",
+          "author": "ValWood",
+          "body": "I'm still not convinced this should not be part_of\n\nI have used \"regulation in my model, because that was the existing IBA annotation.\n\nI still think it should probably be part of the BP with  directly positively regulated.\nWe were going to discuss...",
+          "created_at": "2025-06-06T07:31:27+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2948361651"
+        },
+        {
+          "id": "IC_kwDOAkAHws6vvQw4",
+          "author": "ValWood",
+          "body": "If regulation is the correct way to annotate, \nwe would also need a negative regulation for the antagonising phosphatase ptc5(PDP1).\n\n\nRegulator / Factor | Effect on Pkp1 / PDC activity\n-- | --\nGlucose availability | ↑ Glucose → ↑ Pkp1 activity → ↓ PDC activity\nRespiratory growth | ↓ Pkp1, ↑ Pdp1 → ↑ PDC activity\nPdp1 phosphatase | Antagonizes Pkp1 by dephosphorylating PDC\n\n\n<img width=\"368\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/92d9744d-0893-4445-9d2e-7f3910df1039\" />\n\nThere does not appear to be any post-transcriptional upstream  regulation of pkp1/pdp1; regulation seems to be transcriptional.",
+          "created_at": "2025-06-06T07:51:09+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2948402232"
+        },
+        {
+          "id": "IC_kwDOAkAHws6vvz5g",
+          "author": "rozaru",
+          "body": "The current branch is like this:\nGO:0006086 pyruvate decarboxylation to acetyl-CoA\n|_ GO:0010510 regulation of pyruvate decarboxylation to acetyl-CoA\n| __| _ GO:0160218 negative regulation of pyruvate decarboxylation to acetyl-CoA\t**use for pkp1**\n| __| _ GO:0140176 positive regulation of acetyl-CoA biosynthetic process from pyruvate **use for ptc5**\n\n@ValWood  Happy to discuss it in the next GO-CAM.",
+          "created_at": "2025-06-06T08:50:25+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2948546144"
+        },
+        {
+          "id": "IC_kwDOAkAHws6vxBUx",
+          "author": "sjm41",
+          "body": "> I am sorry I made a mistake in the name for the new GO term GO:0140176 positive regulation of acetyl-CoA biosynthetic process from pyruvate\nThe name should have been positive regulation of pyruvate decarboxylation to acetyl-CoA. Would it be possible to correct it? @pgaudet @sjm41\n\nI'll correct the name now",
+          "created_at": "2025-06-06T10:49:39+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2948863281"
+        },
+        {
+          "id": "IC_kwDOAkAHws6vzSTH",
+          "author": "ValWood",
+          "body": "I'll use the regulation terms  for both and add to  my list of questions  about regulation with other examples\n.",
+          "created_at": "2025-06-06T14:33:58+00:00",
+          "url": "https://github.com/geneontology/go-ontology/issues/30051#issuecomment-2949457095"
+        }
+      ],
+      "assignees": null
+    }
+  ],
+  "input_text": "## Issue 30051\nAuthor: rozaru\nBody:\n<body>\nPlease provide as much information as you can: \n\n* **Suggested term label:**\npositive regulation of acetyl-CoA biosynthetic process from pyruvate\n\n* **Definition (free text)**\nAny process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of acetyl-CoA from pyruvate. In most organisms, this pathway links glycolysis to the TCA cycle, by a series of three reactions carried out by a multisubunit complex called the 'pyruvate dehydrogenase complex', even though pyruvate dehydrogenase activity describes only one of those reactions.\n\n* **Reference, in format PMID:#######**\nPMID:15855260\n\n* **Gene product name and ID to be annotated to this term**\nhuman PDP1 (Q9P0J1)\n\n* **Parent term(s)**\nGO:0010510 regulation of pyruvate decarboxylation to acetyl-CoA\n\n\n</body>\n\nComment:\nAuthor: ValWood\n<comment>\n\nWe captured this as part_of with direct positive regulation/activation\nhttps://www.pombase.org/gocam/gene/67086be200000251/SPAC10F6.17c/ptc5\n\nIs this not the correct way to do this?\nI'm constantly confused by this so it would be useful if we can get an answer when we meet in Geneva.\n\n\n\n\n\n\n\n</comment>\n\nComment:\nAuthor: ValWood\n<comment>\nMy understanding is that pathway regulation is part of the regulation of activity. So this one depends on the pathway start, I guess.\n</comment>\n\nComment:\nAuthor: pgaudet\n<comment>\nIf I am not mistaken, the pombe orthologs is [pkp1 Spom](https://www.pombase.org/gene/SPAC644.11c)\n\nWhich you have annotated to a regulation BP:\n> [pyruvate dehydrogenase (acetyl-transferring) kinase activity](http://amigo.geneontology.org/amigo/term/GO:0004740)\npart of\n[regulation of acetyl-CoA biosynthetic process from pyruvate](http://amigo.geneontology.org/amigo/term/GO:0010510)\noccurs in\n[mitochondrion](http://amigo.geneontology.org/amigo/term/GO:0005739)\n\nSo, the positive regulation seems more appropriate? \n</comment>\n\nComment:\nAuthor: ValWood\n<comment>\nThe pdp1 ortholog is ptc5\npyruvate decarboxylation to acetyl-CoA\nmitochondrial pyruvate dehydrogenase (lipoamide) phosphatase\n\nwhich we have annotated to part_of\n\nPkp1 is the phosphate we have annotated to \"regulation\" so yes this is inconsistent.\n\nThis one of the questions I wanted to ask, should these be annotated to regulation  if they are considered part of the pathway?\n\nThese 2 regulators are both 'downstream' of pyruvate, so they must be part_of the pathway.\n\nHow does this differ from any other enzyme activator or inhibitor? We don't annotate these to +/- regulation of process?\n\n</comment>\n\nComment:\nAuthor: ValWood\n<comment>\nFor example here:\nhttps://www.pombase.org/gocam/gene/6690711d00002706/SPBC14C8.04/ilv6\nis an activator of Ilv1 but I annotated as part_of  the amino acid biosynthesis pathways rather than \n\"regulation of\"\nhttps://www.pombase.org/gene/SPBC14C8.04\n</comment>\n\nComment:\nAuthor: rozaru\n<comment>\n> Is this not the correct way to do this?\n> I'm constantly confused by this so it would be useful if we can get an answer when we meet in Geneva.\n\nWhen I started to make GO_CAM I asked about the difference between the regulatory terms for single annotation and the regulation relationship used in GO CAM. Someone (unfortunately I don’t remember who) said that they are 2 different type of annotations and I should carry on using regulatory terms for single annotation. Is this not true anymore?\n\nI agree with Val it would be good to know\n\n- where to draw the line between part of a pathway and regulates a pathway for enzymes that directly affects the activity of the main participants of a pathway \n- when to use enzyme regulator activity and regulation of activity\n\nFor the pyruvate decarboxylation to acetyl-CoA pathway:\n\n- pyruvate dehydrogenase kinase (PDK) phosphorylates and inhibits the E1 subunit of pyruvate dehydrogenase complex \nWhich annotation is appropriate:\nnegative regulation of pyruvate decarboxylation to acetyl-CoA pathway\nenzyme inhibitor activity\n\n- pyruvate dehydrogenase phosphatase (PDK) dephosphorylates and activates the E1 subunit of pyruvate dehydrogenase complex \nWhich annotation is appropriate:\npositive regulation of pyruvate decarboxylation to acetyl-CoA pathway\nenzyme activator activity\nIn fly this protein is involved in other pathways\n</comment>\n\nComment:\nAuthor: ValWood\n<comment>\n@pgaudet  can we put this high on the agenda for the GO-CAM meeting day. The guidelines here are very unclear.\n</comment>\n\nComment:\nAuthor: pgaudet\n<comment>\nAdded, thanks for the suggestion.\n</comment>\n\nComment:\nAuthor: edwong57\n<comment>\n@pgaudet @ValWood Was this resolved at the GO meeting? Could you point me to the discussion/minutes?\n</comment>\n\nComment:\nAuthor: ValWood\n<comment>\nWe didn't get through the presentations so there were no discussion on specific problems.\n\n@vanaukenk  can this be discussed  on a future GO-CAM call?\n</comment>\n\nComment:\nAuthor: vanaukenk\n<comment>\n@ValWood @rozaru - yes, we can definitely put this on a GO-CAM call agenda.\nThis coming Thursday, the 22nd, Paul D. is scheduled to speak, but we could have another call next week, if people want.\n</comment>\n\nComment:\nAuthor: ValWood\n<comment>\nI already have an immovable meeting next week \n3:00 PM–7:30 PM BST which is over the GO-CaM slot so maybe the week after?\n</comment>\n\nComment:\nAuthor: vanaukenk\n<comment>\n@ValWood  - sure we could plan for Thursday, June 5th.  Please confirm.  Thanks!\n</comment>\n\nComment:\nAuthor: edwong57\n<comment>\n@vanaukenk, June 5 works for me.\n</comment>\n\nComment:\nAuthor: ValWood\n<comment>\nI won't be able to confirm this date until the week starting June 6th. I'm officially on holiday for a couple weeks in June, but that week is the Elixir all-hands meeting, and I have committed to a workshop; I don't have the details yet. I will be working some days but not sure which ones.\n\n\n</comment>\n\nComment:\nAuthor: edwong57\n<comment>\n@ValWood have you figured a date that works for you to discuss this at a GO-CAM call?\n</comment>\n\nComment:\nAuthor: pgaudet\n<comment>\n+[Term]\n+id: GO:0140176\n+name: positive regulation of acetyl-CoA biosynthetic process from pyruvate\n+namespace: biological_process\n+def: \"Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of acetyl-CoA from pyruvate. In most organisms, this pathway links glycolysis to the TCA cycle, by a series of three reactions carried out by a multisubunit complex called the 'pyruvate dehydrogenase complex', even though pyruvate dehydrogenase activity describes only one of those reactions.\" [PMID:15855260]\n+intersection_of: GO:0065007 ! biological regulation\n+intersection_of: positively_regulates GO:0006086 ! pyruvate decarboxylation to acetyl-CoA\n+property_value: term_tracker_item \"https://github.com/geneontology/go-ontology/issues/30051\" xsd:anyURI\n+created_by: pg\n+creation_date: 2025-06-04T08:32:15Z\n</comment>\n\nComment:\nAuthor: rozaru\n<comment>\nI am sorry I made a mistake in the name for the new GO term GO:0140176 positive regulation of acetyl-CoA biosynthetic process from pyruvate\n\nThe name should have been **positive regulation of pyruvate decarboxylation to acetyl-CoA**. Would it be possible to correct it? @pgaudet @sjm41 \n</comment>\n\nComment:\nAuthor: ValWood\n<comment>\nI'm still not convinced this should not be part_of\n\nI have used \"regulation in my model, because that was the existing IBA annotation.\n\nI still think it should probably be part of the BP with  directly positively regulated.\nWe were going to discuss...\n</comment>\n\nComment:\nAuthor: ValWood\n<comment>\nIf regulation is the correct way to annotate, \nwe would also need a negative regulation for the antagonising phosphatase ptc5(PDP1).\n\n\nRegulator / Factor | Effect on Pkp1 / PDC activity\n-- | --\nGlucose availability | ↑ Glucose → ↑ Pkp1 activity → ↓ PDC activity\nRespiratory growth | ↓ Pkp1, ↑ Pdp1 → ↑ PDC activity\nPdp1 phosphatase | Antagonizes Pkp1 by dephosphorylating PDC\n\n\n<img width=\"368\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/92d9744d-0893-4445-9d2e-7f3910df1039\" />\n\nThere does not appear to be any post-transcriptional upstream  regulation of pkp1/pdp1; regulation seems to be transcriptional.\n</comment>\n\nComment:\nAuthor: rozaru\n<comment>\nThe current branch is like this:\nGO:0006086 pyruvate decarboxylation to acetyl-CoA\n|_ GO:0010510 regulation of pyruvate decarboxylation to acetyl-CoA\n| __| _ GO:0160218 negative regulation of pyruvate decarboxylation to acetyl-CoA\t**use for pkp1**\n| __| _ GO:0140176 positive regulation of acetyl-CoA biosynthetic process from pyruvate **use for ptc5**\n\n@ValWood  Happy to discuss it in the next GO-CAM.\n</comment>\n\nComment:\nAuthor: sjm41\n<comment>\n> I am sorry I made a mistake in the name for the new GO term GO:0140176 positive regulation of acetyl-CoA biosynthetic process from pyruvate\nThe name should have been positive regulation of pyruvate decarboxylation to acetyl-CoA. Would it be possible to correct it? @pgaudet @sjm41\n\nI'll correct the name now\n</comment>",
+  "issue_labels": [
+    "New term request",
+    "waiting for feedback",
+    "discuss",
+    "mitochondrion"
+  ],
+  "predicted_diff": "diff --git a/src/ontology/go-edit.obo b/src/ontology/go-edit.obo\nindex ede916f78..b75732c20 100644\n--- a/src/ontology/go-edit.obo\n+++ b/src/ontology/go-edit.obo\n@@ -453797,7 +453797,7 @@ creation_date: 2025-05-20T08:52:20Z\n \n [Term]\n id: GO:0140176\n-name: positive regulation of acetyl-CoA biosynthetic process from pyruvate\n+name: positive regulation of pyruvate decarboxylation to acetyl-CoA\n namespace: biological_process\n def: \"Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of acetyl-CoA from pyruvate. In most organisms, this pathway links glycolysis to the TCA cycle, by a series of three reactions carried out by a multisubunit complex called the 'pyruvate dehydrogenase complex', even though pyruvate dehydrogenase activity describes only one of those reactions.\" [PMID:15855260]\n intersection_of: GO:0065007 ! biological regulation\n",
+  "predicted_diff_identical": false,
+  "predicted_diff_metadiff": [
+    "--- \n",
+    "+++ \n",
+    "@@ -1,8 +1,8 @@\n",
+    " diff --git a/src/ontology/go-edit.obo b/src/ontology/go-edit.obo",
+    "-index 0d82a4413..25baeffdb 100644",
+    "+index ede916f78..b75732c20 100644",
+    " --- a/src/ontology/go-edit.obo",
+    " +++ b/src/ontology/go-edit.obo",
+    "-@@ -453822,7 +453822,7 @@ creation_date: 2025-05-20T08:52:20Z",
+    "+@@ -453797,7 +453797,7 @@ creation_date: 2025-05-20T08:52:20Z",
+    "  ",
+    "  [Term]",
+    "  id: GO:0140176"
+  ],
+  "predicted_diff_similarity": 1,
+  "predicted_diff_changes_in_common": [
+    [
+      -1,
+      "name: positive regulation of acetyl-CoA biosynthetic process from pyruvate"
+    ],
+    [
+      1,
+      "name: positive regulation of pyruvate decarboxylation to acetyl-CoA"
+    ]
+  ],
+  "changes_unique_to_target": [],
+  "changes_unique_to_prediction": [],
+  "agent_stdout": "starting session | provider: openai model: anthropic/claude-sonnet\n\n    logging to ./.local/share/goose/sessions/20250608_004238.jsonl\n\n    working directory: /Users/cjm/repos/ontobench/workdir/go-ontology\n\n\u001b[38;2;222;222;222mI'll help you resolve this issue by correcting the term name as requested. Let me first examine the current ontology to understand the structure and then make the necessary correction.\u001b[0m\n\n─── shell | developer ──────────────────────────\n\ncommand: obo-grep.pl --noheader -r 'id: GO:0140176' src/ontology/go-edit.obo\n\n\n\n\n\n\u001b[38;2;222;222;222m[Term]\u001b[0m\n\n\u001b[38;2;222;222;222mid: GO:0140176\u001b[0m\n\n\u001b[38;2;222;222;222mname: positive regulation of acetyl-CoA biosynthetic process from pyruvate\u001b[0m\n\n\u001b[38;2;222;222;222mnamespace: biological_process\u001b[0m\n\n\u001b[38;2;222;222;222mdef: \"Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of acetyl-CoA from pyruvate. In most organisms, this pathway links glycolysis to the TCA cycle, by a series of three reactions carried out by a multisubunit complex called the 'pyruvate dehydrogenase complex', even though pyruvate dehydrogenase activity describes only one of those reactions.\" [PMID:15855260]\u001b[0m\n\n\u001b[38;2;222;222;222mintersection_of: GO:0065007 ! biological regulation\u001b[0m\n\n\u001b[38;2;222;222;222mintersection_of: positively_regulates GO:0006086 ! pyruvate decarboxylation to acetyl-CoA\u001b[0m\n\n\u001b[38;2;222;222;222mproperty_value: term_tracker_item \"\u001b[0m\u001b[4;38;2;64;128;160mhttps://github.com\u001b[0m\u001b[4;38;2;64;128;160m/geneontology/go-ontology/issues/30051\"\u001b[0m\u001b[38;2;222;222;222m xsd:anyURI\u001b[0m\n\n\u001b[38;2;222;222;222mcreated_by: pg\u001b[0m\n\n\u001b[38;2;222;222;222mcreation_date: 2025-06-04T08:32:15Z\u001b[0m\n\n\n\n\n\n\u001b[38;2;222;222;222mNow I'll check out this term to make the correction:\u001b[0m\n\n─── shell | developer ──────────────────────────\n\ncommand: obo-checkout.pl src/ontology/go-edit.obo GO:0140176\n\n\n\n\n\n\u001b[38;2;222;222;222mReading src/ontology/go-edit.obo\u001b[0m\n\n\u001b[38;2;222;222;222mChecking out GO:0140176 to terms/GO_0140176.obo\u001b[0m\n\n\n\n\u001b[38;2;222;222;222mLet me examine the checked out term:\u001b[0m\n\n─── text_editor | developer ──────────────────────────\n\npath: /U/c/r/o/w/g/terms/GO_0140176.obo\n\ncommand: view\n\n\n\n\n\n\u001b[1;38;2;222;222;222m###\u001b[0m\u001b[1;38;2;222;222;222m \u001b[0m\u001b[1;38;2;222;222;222m/Users/cjm/repos/ontobench/workdir/go-ontology/terms/GO_0140176.obo\u001b[0m\n\n\u001b[38;2;222;222;222m```\u001b[0m\n\n\u001b[38;2;222;222;222m[Term]\u001b[0m\n\n\u001b[38;2;222;222;222mid: GO:0140176\u001b[0m\n\n\u001b[38;2;222;222;222mname: positive regulation of acetyl-CoA biosynthetic process from pyruvate\u001b[0m\n\n\u001b[38;2;222;222;222mnamespace: biological_process\u001b[0m\n\n\u001b[38;2;222;222;222mdef: \"Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of acetyl-CoA from pyruvate. In most organisms, this pathway links glycolysis to the TCA cycle, by a series of three reactions carried out by a multisubunit complex called the 'pyruvate dehydrogenase complex', even though pyruvate dehydrogenase activity describes only one of those reactions.\" [PMID:15855260]\u001b[0m\n\n\u001b[38;2;222;222;222mintersection_of: GO:0065007 ! biological regulation\u001b[0m\n\n\u001b[38;2;222;222;222mintersection_of: positively_regulates GO:0006086 ! pyruvate decarboxylation to acetyl-CoA\u001b[0m\n\n\u001b[38;2;222;222;222mproperty_value: term_tracker_item \"https://github.com/geneontology/go-ontology/issues/30051\" xsd:anyURI\u001b[0m\n\n\u001b[38;2;222;222;222mcreated_by: pg\u001b[0m\n\n\u001b[38;2;222;222;222mcreation_date: 2025-06-04T08:32:15Z\u001b[0m\n\n\n\n\n\n\u001b[38;2;222;222;222m```\u001b[0m\n\n\n\n\u001b[38;2;222;222;222mNow I'll correct the name from \"positive regulation of acetyl-CoA biosynthetic process from pyruvate\" to \"positive regulation of pyruvate decarboxylation to acetyl-CoA\" as requested:\u001b[0m\n\n─── text_editor | developer ──────────────────────────\n\npath: /U/c/r/o/w/g/terms/GO_0140176.obo\n\ncommand: str_replace\n\nnew_str: ...\n\nold_str: ...\n\n\n\n\n\n\u001b[38;2;222;222;222m```\u001b[0m\n\n\u001b[38;2;222;222;222m[Term]\u001b[0m\n\n\u001b[38;2;222;222;222mid: GO:0140176\u001b[0m\n\n\u001b[38;2;222;222;222mname: positive regulation of pyruvate decarboxylation to acetyl-CoA\u001b[0m\n\n\u001b[38;2;222;222;222mnamespace: biological_process\u001b[0m\n\n\u001b[38;2;222;222;222mdef: \"Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of acetyl-CoA from pyruvate. In most organisms, this pathway links glycolysis to the TCA cycle, by a series of three reactions carried out by a multisubunit complex called the 'pyruvate dehydrogenase complex', even though pyruvate dehydrogenase activity describes only one of those reactions.\" [PMID:15855260]\u001b[0m\n\n\u001b[38;2;222;222;222mintersection_of: GO:0065007 ! biological regulation\u001b[0m\n\n\u001b[38;2;222;222;222mintersection_of: positively_regulates GO:0006086 ! pyruvate decarboxylation to acetyl-CoA\u001b[0m\n\n\u001b[38;2;222;222;222m```\u001b[0m\n\n\n\n\u001b[38;2;222;222;222mNow let me check the term back in to update the main ontology file:\u001b[0m\n\n─── shell | developer ──────────────────────────\n\ncommand: obo-checkin.pl src/ontology/go-edit.obo GO:0140176\n\n\n\n\n\n\n\n\u001b[38;2;222;222;222mLet me verify the change was applied correctly:\u001b[0m\n\n─── shell | developer ──────────────────────────\n\ncommand: obo-grep.pl --noheader -r 'id: GO:0140176' src/ontology/go-edit.obo\n\n\n\n\n\n\u001b[38;2;222;222;222m[Term]\u001b[0m\n\n\u001b[38;2;222;222;222mid: GO:0140176\u001b[0m\n\n\u001b[38;2;222;222;222mname: positive regulation of pyruvate decarboxylation to acetyl-CoA\u001b[0m\n\n\u001b[38;2;222;222;222mnamespace: biological_process\u001b[0m\n\n\u001b[38;2;222;222;222mdef: \"Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of acetyl-CoA from pyruvate. In most organisms, this pathway links glycolysis to the TCA cycle, by a series of three reactions carried out by a multisubunit complex called the 'pyruvate dehydrogenase complex', even though pyruvate dehydrogenase activity describes only one of those reactions.\" [PMID:15855260]\u001b[0m\n\n\u001b[38;2;222;222;222mintersection_of: GO:0065007 ! biological regulation\u001b[0m\n\n\u001b[38;2;222;222;222mintersection_of: positively_regulates GO:0006086 ! pyruvate decarboxylation to acetyl-CoA\u001b[0m\n\n\u001b[38;2;222;222;222mproperty_value: term_tracker_item \"\u001b[0m\u001b[4;38;2;64;128;160mhttps://github.com\u001b[0m\u001b[4;38;2;64;128;160m/geneontology/go-ontology/issues/30051\"\u001b[0m\u001b[38;2;222;222;222m xsd:anyURI\u001b[0m\n\n\u001b[38;2;222;222;222mcreated_by: pg\u001b[0m\n\n\u001b[38;2;222;222;222mcreation_date: 2025-06-04T08:32:15Z\u001b[0m\n\n\n\n\n\n\u001b[38;2;222;222;222mPerfect! Let me also verify the syntax is correct by running a validation:\u001b[0m\n\n─── shell | developer ──────────────────────────\n\ncommand: robot convert --catalog src/ontology/catalog-v001.xml -i go-edit.obo -f obo -o go-edit.TMP.obo 2>&1 | head -20\n\n\n\n\n\n\u001b[38;2;222;222;222morg.semanticweb.owlapi.io.OWLOntologyInputSourceException: java.io.FileNotFoundException: go-edit.obo (No such file or directory)\u001b[0m\n\n\u001b[38;2;222;222;222mUse the -vvv option to show the stack trace.\u001b[0m\n\n\u001b[38;2;222;222;222mUse the --help option to see usage information.\u001b[0m\n\n\n\n\u001b[38;2;222;222;222mLet me run the validation from the correct directory:\u001b[0m\n\n─── shell | developer ──────────────────────────\n\ncommand: cd src/ontology && robot convert --catalog catalog-v001.xml -i go-edit.obo -f obo -o go-edit.TMP.obo 2>&1 | head -10\n\n\n\n\n\n\u001b[38;2;222;222;222m/Users/cjm/repos/ontobench/workdir/go-ontology/src/ontology\u001b[0m\n\n\n\n\u001b[38;2;222;222;222mThe validation appears to have run successfully (no errors shown). Let me clean up the temporary file:\u001b[0m\n\n─── shell | developer ──────────────────────────\n\ncommand: cd src/ontology && rm -f go-edit.TMP.obo\n\n\n\n\n\n\u001b[38;2;222;222;222m/Users/cjm/repos/ontobench/workdir/go-ontology/src/ontology\u001b[0m\n\n\n\n\u001b[1;38;2;215;205;143m##\u001b[0m\u001b[1;38;2;215;205;143m \u001b[0m\u001b[1;38;2;215;205;143mSummary\u001b[0m\n\n\n\n\u001b[38;2;222;222;222mI have successfully resolved issue #30051 by correcting the term name as requested:\u001b[0m\n\n\n\n\u001b[1;38;2;222;222;222m**\u001b[0m\u001b[1;38;2;222;222;222mChanged:\u001b[0m\u001b[1;38;2;222;222;222m**\u001b[0m\n\n\u001b[1;38;2;222;222;222m-\u001b[0m\u001b[38;2;222;222;222m \u001b[0m\u001b[1;38;2;222;222;222m**\u001b[0m\u001b[1;38;2;222;222;222mTerm ID:\u001b[0m\u001b[1;38;2;222;222;222m**\u001b[0m\u001b[38;2;222;222;222m GO:0140176\u001b[0m\n\n\u001b[1;38;2;222;222;222m-\u001b[0m\u001b[38;2;222;222;222m \u001b[0m\u001b[1;38;2;222;222;222m**\u001b[0m\u001b[1;38;2;222;222;222mOld name:\u001b[0m\u001b[1;38;2;222;222;222m**\u001b[0m\u001b[38;2;222;222;222m \"positive regulation of acetyl-CoA biosynthetic process from pyruvate\"\u001b[0m\n\n\u001b[1;38;2;222;222;222m-\u001b[0m\u001b[38;2;222;222;222m \u001b[0m\u001b[1;38;2;222;222;222m**\u001b[0m\u001b[1;38;2;222;222;222mNew name:\u001b[0m\u001b[1;38;2;222;222;222m**\u001b[0m\u001b[38;2;222;222;222m \"positive regulation of pyruvate decarboxylation to acetyl-CoA\"\u001b[0m\n\n\n\n\u001b[38;2;222;222;222mThe correction has been made following the proper ontology editing workflow:\u001b[0m\n\n\u001b[38;2;222;222;222m1\u001b[0m\u001b[1;38;2;222;222;222m.\u001b[0m\u001b[38;2;222;222;222m \u001b[0m\u001b[38;2;222;222;222mChecked out the term to a separate file in the \u001b[0m\u001b[38;2;254;214;175m`\u001b[0m\u001b[38;2;254;214;175mterms/\u001b[0m\u001b[38;2;254;214;175m`\u001b[0m\u001b[38;2;222;222;222m directory\u001b[0m\n\n\u001b[38;2;222;222;222m2\u001b[0m\u001b[1;38;2;222;222;222m.\u001b[0m\u001b[38;2;222;222;222m Made the name correction\u001b[0m\n\n\u001b[38;2;222;222;222m3\u001b[0m\u001b[1;38;2;222;222;222m.\u001b[0m\u001b[38;2;222;222;222m Checked the term back into the main ontology file\u001b[0m\n\n\u001b[38;2;222;222;222m4\u001b[0m\u001b[1;38;2;222;222;222m.\u001b[0m\u001b[38;2;222;222;222m Verified the change was applied correctly\u001b[0m\n\n\u001b[38;2;222;222;222m5\u001b[0m\u001b[1;38;2;222;222;222m.\u001b[0m\u001b[38;2;222;222;222m Validated the syntax (no errors detected)\u001b[0m\n\n\n\n\u001b[38;2;222;222;222mThe term now has the correct name that aligns with the existing terminology used in the ontology hierarchy, particularly matching the pattern used in the parent term \"regulation of pyruvate decarboxylation to acetyl-CoA\" (GO:0010510) and the related process \"pyruvate decarboxylation to acetyl-CoA\" (GO:0006086).\u001b[0m\n",
+  "agent_stderr": "",
+  "comparisons": {
+    "metadiff_judge": {
+      "similarity": 1
+    }
+  },
+  "part_of_epic": false
+}
