@@ -49,7 +49,7 @@ ONTOLOGIES_AS_DOC_MAP = {
 
 ONTOLOGIES_URL = [v for _, v in ONTOLOGIES_AS_DOC_MAP.items()]
 
-LLM_CHANGE_AGENT_MODULE = pystow.module("llm_change_agent")
+LLM_CHANGE_AGENT_MODULE = pystow.module("ontoeval")
 VECTOR_STORE = LLM_CHANGE_AGENT_MODULE.join("vector_store")
 VECTOR_DB_NAME = "chroma.sqlite3"
 VECTOR_DB_PATH = VECTOR_STORE / VECTOR_DB_NAME

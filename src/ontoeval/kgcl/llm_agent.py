@@ -67,7 +67,7 @@ class LLMChangeAgent:
         if self.provider in provider_config_map:
             config_class_name, get_models_func = provider_config_map[self.provider]
             llm_model = _validate_and_get_model(self.model, get_models_func)
-            config_module = __import__("llm_change_agent.config.llm_config", fromlist=[config_class_name])
+            config_module = __import__("ontoeval.config.llm_config", fromlist=[config_class_name])
             ConfigClass = getattr(config_module, config_class_name)
             return ConfigClass(model=llm_model, provider=get_provider_for_model(llm_model))
 
