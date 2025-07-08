@@ -9,7 +9,7 @@ def render_result(r: PRBenchmark) -> str:
     """
     Render a PRBenchmark as a markdown string.
     """
-    return "\n".join(render_result_iter(r))
+    return "\n".join([str(r) for r in render_result_iter(r)])
 
 def render_change(chg: Change) -> str:
     """
@@ -31,6 +31,9 @@ def render_result_iter(r: PRBenchmark) -> Iterator[str]:
     llm_judge : LLMJudgeComparison = r.comparisons.get("llm_judge")
     yield f"# {r.pr_number} - {r.title}"
     yield f"\n - [{r.url}]({r.url})\n"
+    for issue in r.linked_issues:
+        yield f"- [ Issue: #{issue.title}]({issue.url})\n"
+    yield f"\n## PR body\n"
     yield f"\n{r.body}\n"
 
     yield f"## Metadiff ({md_judge.similarity})\n"
@@ -53,4 +56,17 @@ def render_result_iter(r: PRBenchmark) -> Iterator[str]:
     yield "\n## Issues\n" 
     for issue in r.linked_issues:
         yield f"- [{issue.title}]({issue.url})\n"
-        yield issue.body
+        if r.is_issue_after_pr_created(issue):
+            yield f"**Masked during eval: Issue created after PR**\n"
+        yield issue.body or ""
+
+    yield "\n## Agent output\n"
+    if r.agent_output.structured_messages:
+        for message in r.agent_output.structured_messages:
+            yield f"\n```yaml"
+            yield yaml.dump(message, indent=2)
+            yield "```"
+    else:
+        yield "```"
+        yield r.agent_output.result_text
+        yield "```"

@@ -16,6 +16,12 @@ class MetadiffComparison(Comparison):
     changes_in_common: list[Change] | None = None
     changes_in_diff1: list[Change] | None = None
     changes_in_diff2: list[Change] | None = None
+    num_changes_in_common: int | None = None
+    num_changes_in_diff1: int | None = None
+    num_changes_in_diff2: int | None = None
+    f1_score: float | None = None
+    precision: float | None = None
+    recall: float | None = None
 
 def lines_to_changes(lines: list[str], mask_ids: bool = True) -> list[Change]:
     """
@@ -90,6 +96,10 @@ def compare_diffs(diff1: str | list[str], diff2: str | list[str], silent=False, 
         False
 
     """
+    if not diff1:
+        diff1 = ""
+    if not diff2:
+        diff2 = ""
     diff1 = diff1.splitlines() if isinstance(diff1, str) else diff1
     diff2 = diff2.splitlines() if isinstance(diff2, str) else diff2
     metadiff_color_text = visual_diff("\n".join(diff1), "\n".join(diff2), silent=silent)
@@ -100,15 +110,24 @@ def compare_diffs(diff1: str | list[str], diff2: str | list[str], silent=False, 
     tot_changes = len(changes1 | changes2)
     similarity = len(changes1 & changes2) / tot_changes if tot_changes > 0 else 0.0
     metadiff = list(unified_diff(diff1, diff2))
+    changes_in_common=list(changes1 & changes2)
+    changes_in_diff1=list(changes1 - changes2)
+    changes_in_diff2=list(changes2 - changes1)
     return MetadiffComparison(
         identical=unified_diff(diff1, diff2) == "",
         similarity=similarity,
         metadiff=metadiff,
         metadiff_color_text=metadiff_color_text,
         metadiff_color_html=metadiff_color_html,
-        changes_in_common=list(changes1 & changes2),
-        changes_in_diff1=list(changes1 - changes2),
-        changes_in_diff2=list(changes2 - changes1),
+        changes_in_common=changes_in_common,
+        changes_in_diff1=changes_in_diff1,
+        changes_in_diff2=changes_in_diff2,
+        num_changes_in_common=len(changes_in_common), # aka true positives
+        num_changes_in_diff1=len(changes_in_diff1), # aka false negatives
+        num_changes_in_diff2=len(changes_in_diff2), # aka false positives
+        precision=len(changes_in_common) / len(changes1) if len(changes1) > 0 else 0.0,
+        recall=len(changes_in_common) / len(changes2) if len(changes2) > 0 else 0.0,
+        f1_score=2 * len(changes_in_common) / (len(changes1) + len(changes2)) if len(changes1) > 0 and len(changes2) > 0 else 0.0,
     )
 
 def visual_diff(diff1: str, diff2: str, silent=False, **kwargs) -> str:
