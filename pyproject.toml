@@ -1,13 +1,15 @@
 [project]
 name = "ontoeval"
-version = "0.1.0"
-description = "Add your description here"
+description = "Benchmarking AI agents against ontology PRs"
 readme = "README.md"
 authors = [
     { name = "Chris Mungall", email = "cjm@berkeleybop.org" }
 ]
 requires-python = ">=3.11"
+dynamic = ["version"]
+
 dependencies = [
+    "argilla>=2.8.0",
     "click>=8.1.8",
     "diskcache>=5.6.3",
     "joblib>=1.5.1",
@@ -21,14 +23,49 @@ dependencies = [
 ontoeval = "ontoeval:main"
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "uv-dynamic-versioning"]
 build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = [
-    "pytest>=8.4.0",
+    "jupyter>=1.0.0",
+    "nbformat",
+    "mkdocs>=1.4.0",
+    "mkdocs-material>=9.0.0",
+    "mkdocs-windmill",
+    "mkdocstrings[python]>=0.21.0",
+    "pymdown-extensions>=10.0.0",
+    "mypy>=1.0.0",
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.18.0",
+    "pytest-cov>=4.0.0",
+    "ruff>=0.11.5",
 ]
+
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
+
+[tool.uv-dynamic-versioning]
+vcs = "git"
+style = "pep440"
+fallback-version = "0.1.0"
 
 [tool.pytest.ini_options]
 addopts = "--doctest-modules"
 doctest_optionflags = ["ELLIPSIS", "NORMALIZE_WHITESPACE"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.format]
+exclude = [
+  "docs/",
+  "tests/input"
+]
+
+[tool.ruff.lint]
+exclude = [
+  "docs/",
+  "tests/input"
+]
